@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "a69f91f5-cbba-432a-9615-654281c0c979",
+		"name": "Family Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "parte 1",
+			"item": [
+				{
+					"name": "1)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Cesar\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Lucas\"\n    },\n    {\n        \"id\": \"3\",\n        \"name\": \"Pedro\"\n    },\n    {\n        \"id\": \"4\",\n        \"name\": \"João\"\n    }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/lists/invertarray",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"lists",
+								"invertarray"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Cesar\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Lucas\"\n    },\n    {\n        \"id\": \"3\",\n        \"name\": \"Pedro\"\n    },\n    {\n        \"id\": \"4\",\n        \"name\": \"João\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/lists/invertarrayinplace",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"lists",
+								"invertarrayinplace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Cesar\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Lucas\"\n    },\n    {\n        \"id\": \"3\",\n        \"name\": \"Pedro\"\n    },\n    {\n        \"id\": \"4\",\n        \"name\": \"João\"\n    },\n    {\n        \"id\": \"5\",\n        \"name\": \"Paulo\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/lists/invertlistinplace",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"lists",
+								"invertlistinplace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/lists/csv",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"lists",
+								"csv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parte 2",
+			"item": [
+				{
+					"name": "Create Parent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"cesar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/parent",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Parents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fistName\": \"janila\",\n    \"lastName\": \"ahmed\",\n    \"email\": \"jahmed@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/parent",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Parent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"2"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Parent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/fathers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"fathers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/fathers/morethanonechild",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"fathers",
+								"morethanonechild"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/fathersandmothers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"fathersandmothers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/numberoffatherchilds/Mark",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"numberoffatherchilds",
+								"Mark"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/parent/numberofmotherchilds/Lucy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parent",
+								"numberofmotherchilds",
+								"Lucy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

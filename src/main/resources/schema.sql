@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS child;
+DROP TABLE IF EXISTS parent;
+
+CREATE TABLE parent (
+  Id SERIAL PRIMARY KEY,
+  Name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE child (
+  Id SERIAL PRIMARY KEY,
+  Name VARCHAR(50) NOT NULL,
+  Father_Id INT,
+  Mother_Id INT,
+  FOREIGN KEY (Father_Id) REFERENCES parent(Id),
+  FOREIGN KEY (Mother_Id) REFERENCES parent(Id)
+  );
+
